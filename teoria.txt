@@ -1,0 +1,8 @@
+SASS
+
+funciones 
+  amount: cantidad de color a oscurecer
+  darken($color: $primary, $amount: 0);
+
+  amount: cantidad de color para aclarar
+  lighten($color: #000000, $amount: 0);
