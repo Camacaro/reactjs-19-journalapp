@@ -7,14 +7,16 @@
   cursor: pointer;
   font-size: 12px;
   padding: 7px 10px 7px 10px;
+  
+  transition: color .3s ease;
 
   &:focus {
     outline: none;
   }
 
-  
-
-
+  &:hover {
+    color: darken($color: white, $amount: 20)
+  }
 }
 
 // .btn-primary:disabled ->  &:disabled
