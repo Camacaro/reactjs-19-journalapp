@@ -1,4 +1,5 @@
 
+
 .journal__main-content {
   display: flex;
 }
@@ -35,8 +36,9 @@
   transition: color .3s ease;
 
   &:hover {
-    color: darken($color: white, $amount: 20);
+      color: darken($color: white, $amount: 20);
   }
+  
 }
 
 .journal__entries {
@@ -56,17 +58,20 @@
 
 .journal__entry-picture {
   height: 75px;
-  width: 75px
+  width: 75px;
 }
 
-.journal__entry-body{
+
+.journal__entry-body {
   padding: 10px;
 }
-.journal__entry-title{
+
+.journal__entry-title {
   font-size: 14px;
   font-weight: bold;
 }
-.journal__entry-content{
+
+.journal__entry-content {
   font-size: 10px;
 }
 
@@ -78,6 +83,6 @@
   padding: 5px;
 }
 
-.journal__entry-date-box span {
+.journal__entry-date-box span{
   font-size: 12px;
 }
