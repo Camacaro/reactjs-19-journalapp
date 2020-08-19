@@ -16,7 +16,7 @@ import { types } from "../types/types";
 
 const initialState = {
   notes: [],
-  actice: null
+  active: null
 }
 
 export const notesReducer = ( state = initialState, action ) => {
@@ -35,6 +35,16 @@ export const notesReducer = ( state = initialState, action ) => {
       return {
         ...state,
         notes: [ ...action.payload ]
+      }
+
+    case types.notesUpdated:
+      return {
+        ...state,
+        notes: state.notes.map(
+          note => note.id === action.payload.id
+            ? action.payload.note
+            : note
+        )
       }
 
     default:
