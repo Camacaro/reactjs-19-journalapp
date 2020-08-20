@@ -20,7 +20,7 @@ export const startNewNote = () => {
     // collection where i want to save the note
     const docRef = await db.collection(`${ uid }/journal/notes`).add(newNote)
 
-    console.log(docRef)
+    // console.log(docRef)
 
     dispatch( activeNote( docRef.id, newNote ) )
     dispatch( addNewNote( docRef.id, newNote ) )
