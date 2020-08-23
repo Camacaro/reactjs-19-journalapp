@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <LoginScreen /> debe de coincidir los types 1`] = `
+exports[`Pruebas en <LoginScreen /> debe de coincidir el toMatchSnapshot 1`] = `
 Array [
   <h3
     className="auth__title"

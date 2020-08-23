@@ -6,11 +6,10 @@ import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { MemoryRouter } from 'react-router-dom';
 
-import { LoginScreen } from '../../components/auth/LoginScreen';
-import { types } from '../../types/types';
-import { startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
+import { LoginScreen } from '../../../components/auth/LoginScreen';
+import { startGoogleLogin, startLoginEmailPassword } from '../../../actions/auth';
 
-jest.mock('../../actions/auth', () => ({
+jest.mock('../../../actions/auth', () => ({
   startGoogleLogin: jest.fn(),
   startLoginEmailPassword: jest.fn()
 }))
@@ -28,7 +27,8 @@ const initState = {
 
 // State de mi Redux en la app - lo que se ve en el Redux DevsTools
 let store = mockStore(initState);
-// Manejar el dispath del store para saber si se disparo
+// Manejar el dispath del store para saber si se disparo y tambien fue
+// porque se aplicaba el async en las actions 
 store.dispatch = jest.fn();
 
 const wrapper = mount( 
@@ -47,7 +47,7 @@ describe('Pruebas en <LoginScreen />', () => {
     jest.clearAllMocks();
   })
   
-  test('debe de coincidir los types', () => {
+  test('debe de coincidir el toMatchSnapshot', () => {
     expect( wrapper ).toMatchSnapshot();
   });
 
